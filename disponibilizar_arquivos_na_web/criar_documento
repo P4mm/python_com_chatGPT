@@ -1,0 +1,15 @@
+from docx import Document
+
+def criar_documento(atividades):
+    doc = Document()
+
+    # Adicione as atividades ao documento
+    for atividade in atividades:
+        doc.add_paragraph(atividade)
+
+    # Salve o documento
+    doc.save('relatorio_atividades.docx')
+
+# Exemplo de uso
+atividades = ["Atividade 1", "Atividade 2", "Atividade 3"]
+criar_documento(atividades)
